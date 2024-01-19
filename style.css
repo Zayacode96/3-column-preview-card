@@ -89,6 +89,18 @@ main {
     display: ;
 }
 
+.btn:hover {
+    background-color:  transparent;
+    cursor: pointer;
+    border: 2px solid var(--neutral);
+}
+.sedan 
+ .btn:hover, 
+ .suv .btn:hover,
+ .luxury .btn:hover {
+    color: var(--paragraph);
+}
+
 .sedan .btn {
     color: var(--sedan);
 }
@@ -136,8 +148,23 @@ main {
 /***********/
 /** MEDIA QUERIES **/
 
-@media screen and (max-width: 960px) {
+@media only screen and (max-width: 960px) {
     footer .attribution {
         display: none;
+    }
+}
+
+@media only screen and (max-width: 625px) {
+    .vehicles:nth-of-type(1) {
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 0;
+    }
+
+
+    .vehicles:nth-of-type(3) {
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 0;
     }
 }
